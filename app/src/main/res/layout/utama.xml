@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ViewFlipper
+        android:id="@+id/viewflip1"
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:inAnimation="@android:anim/slide_in_left"
+        android:outAnimation="@android:anim/slide_out_right">
+
+        <TimePicker
+            android:id="@+id/timepick"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:timePickerMode="spinner" />
+
+        <EditText
+            android:id="@+id/edit_t"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Add note"
+            android:inputType="text"/>
+
+
+    </ViewFlipper>
+
+    <ViewFlipper
+        android:id="@+id/viewflip2"
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:layout_below="@id/b_stop">
+
+        <Button
+            android:id="@+id/lay2"
+            android:layout_width="118dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Add Note" />
+        <Button
+            android:id="@+id/edit_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="OK"/>
+    </ViewFlipper>
+
+    <TextView
+        android:id="@+id/timetext"
+        android:layout_width="236dp"
+        android:layout_height="129dp"
+        android:layout_below="@id/viewflip1"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/textborder"
+        android:padding="10dp"
+        android:text=""
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/b_stop"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timetext"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@id/b_start"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/stop" />
+
+    <Button
+        android:id="@+id/b_start"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/timetext"
+        android:layout_marginStart="37dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="25dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/start" />
+
+
+</RelativeLayout>
